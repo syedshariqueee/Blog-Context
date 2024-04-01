@@ -5,7 +5,7 @@ import { AppContext } from "../context/AppContext";
 const Blogs = () => {
     // Consume
     const { posts, loading } = useContext(AppContext);
-    console.log(posts);
+    // console.log(posts);
     return (
         <div className="max-w-[620px] w-11/12 py-3 flex flex-col gap-y-7 my-[100px]">
             {loading ? (
@@ -17,7 +17,7 @@ const Blogs = () => {
             ) : (
                 posts.map((post) => {
                     return <div key={post.id} className="">
-                        <p className="font-bold text-sm ">{post.title}</p>
+                        <p className=" font-bold text-xl ">{post.title}</p>
                         <p className="text-[14px]">
                             By <span className="italic">{post.author}</span> or{" "}
                             <span className="underline font-bold">{post.category}</span>

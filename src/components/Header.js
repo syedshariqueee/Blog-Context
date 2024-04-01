@@ -4,8 +4,8 @@ const Header = () => {
   return (
     <div>
       
-      <header className=' '>
-        <h1 className='capitalize font-bold text-3xl' >
+      <header className='  mb-[-300px] '>
+        <h1 className=' uppercase font-bold text-3xl' >
           Codehelp Blogs
         </h1>
       </header>

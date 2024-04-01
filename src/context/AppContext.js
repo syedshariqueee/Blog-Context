@@ -22,7 +22,7 @@ function AppContextProvider({ children }) {
             setPosts(data?.posts);
             setTotalPages(data?.totalPages);
         }
-        catch (error) {
+        catch (e) {
             console.log("Error")
             setPage(1);
             setPosts([]);
