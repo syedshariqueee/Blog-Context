@@ -12,7 +12,7 @@ export default function Pagination() {
         {page > 1 && (
           <button
             onClick={() => handlePageChange(page - 1)}
-            className="border-2 border-gray-300 py-1 px-4 rounded-md"
+            className="border-2 border-gray-300 py-1 bg-red-600 text-white px-4 rounded-md"
           >
             Previous
           </button>
@@ -20,12 +20,12 @@ export default function Pagination() {
         {page < totalPages && (
           <button
             onClick={() => handlePageChange(page + 1)}
-            className="border-2 border-gray-300 py-1 px-4 rounded-md"
+            className="border-2 border-gray-300 py-1 px-4 text-white bg-green-600 rounded-md"
           >
             Next
           </button>
         )}
-        <p className="text-sm font-semibold ml-auto">
+        <p className="text-sm font-semibold  ml-auto">
           Page {page} of {totalPages}
         </p>
       </div>

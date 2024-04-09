@@ -3,28 +3,36 @@ import { NavLink } from "react-router-dom";
 
 const BlogDetails = ({post}) => {
   return (
-    <div>
+    
+  
+    <div className="max-w-[620px] self-center  mt-[60px]  w-11/12  mb-[50px] flex flex-col  ">
+
+    <div className="max-w-[620px] self-center  w-11/12  flex flex-col gap-y-3 my-[10px]">
       <NavLink to={`/blog/${post.id}`}>
-        <span>{post.title}</span>
+        <span className="font-bold text-lg ">{post.title}</span>
       </NavLink>
       <p>
         By
-        <span>{post.author}</span>
+        <span className="italic">{post.author}</span>
         on{" "}
         <NavLink to={`/categories/${post.category.replaceAll(" ", "-")}`}>
-          <span>{post.category}</span>
+          <span className="underline font-bold">{post.category}</span>
         </NavLink>
       </p>
-      <p>Posted on {post.date}</p>
-      <p>{post.content}</p>
+      <p className="text-[14px]">Posted on {post.date}</p>
+      <p className="text-[18px] mt-[13px]">{post.content}</p>
       <div>
         {post.tags.map((tag, index) => (
-          <NavLink key={index} to={`/tags/${tag.replaceAll(" ", "-")}`}>
-            <span>{`#${tag}`}</span>
+          <NavLink className="flex flex-wrap gap-x-2 items-center" key={index} to={`/tags/${tag.replaceAll(" ", "-")}`}>
+            <span className="text-sm font-semibold underline text-blue-700 cursor-pointer" >{` #${tag}`}</span>
           </NavLink>
         ))}
       </div>
     </div>
+
+
+    </div>
+    
   );
 };
 
